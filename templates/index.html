@@ -61,7 +61,7 @@
                 <ul class="thumb-info" style="max-width: 550px;">
                   <li><a href="{% url 'post_detail' post.slug %}"><i class="ti-user"></i>{{post.author}}</a></li>
                   <li><a href="{% url 'post_detail' post.slug %}"><i class="ti-notepad"></i>{{post.published_at}}</a></li>
-                  <li><a href="{% url 'post_detail' post.slug %}"><i class="ti-themify-favicon"></i>{{post.comments_amount}}</a>
+                  <li><a href="{% url 'post_detail' post.slug %}"><i class="ti-themify-favicon"></i>{{post.comments_amount}} Comments</a>
                   </li>
                 </ul>
               </div>
@@ -70,6 +70,7 @@
                 <p>{{post.text|truncatechars:200}}</p>
                 <a class="button" href="{% url 'post_detail' post.slug %}">Read More <i class="ti-arrow-right"></i></a>
               </div>
+              </br>
             {% endfor %}
           </div>
           <div class="row">
